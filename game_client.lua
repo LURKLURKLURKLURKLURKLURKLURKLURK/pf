@@ -79,7 +79,7 @@ function game_client:get_character(plr)
 end
 
 function game_client:get_health(plr)
-    local player = game_client.replication_interface.getEntry(player)
+    local player = game_client.replication_interface.getEntry(plr)
     if player then 
         return player._healthstate.health0, player._healthstate.maxhealth 
     end
